@@ -6,7 +6,8 @@
   - Decision tree (using Gini index)
   - Logistic regression
   - Support vector machine
-- Dataset: https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/ (breast-cancer-winston.data)
+- Dataset: https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/ (breast-cancer-winston.data)  
+- Colab link: https://colab.research.google.com/drive/1YGrzfTDws2xSI1JQwwcyiToYlszpMw-O?usp=sharing
 
 <details>
     <summary>Detail</summary>
@@ -37,7 +38,8 @@
   - EM(GMM)
   - CLARANS
   - DBSCAN
- - Dataset: https://www.kaggle.com/datasets/camnugent/california-housing-prices (housing.csv)
+ - Dataset: https://www.kaggle.com/datasets/camnugent/california-housing-prices (housing.csv)  
+ - Colab link: 
  
  <details>
     <summary>Detail</summary>
