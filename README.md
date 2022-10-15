@@ -22,7 +22,7 @@
       
     (Check Dataset: printStatistic)
     
-    3. Compare the performance for each classificatoin model
+    3. Compare the performance for each classification model
       3-1. Inner For Loop: Compare result with various test_ratio (0.1, 0.2, 0.3)
       3-2. Outer For Loop: Compare result with 4 classification models: Model - DecisionTreeEntropy, DecisionTreeGini, LogisticRegression, SVM
           ∙ Use various of the model parameters and hyperparameters for each model: Model - gridSearch
