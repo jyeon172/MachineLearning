@@ -13,22 +13,21 @@
     
     1. Read Data and Set columns
     
-    (Check Dataset using "printStatistic")
+    (Check Dataset: printStatistic)
     
     2. Do Preprocessing
-      2-1. Drop NaN Value _(Preprocess)drop_
-      2-2. Reset index value ("Preprocess" - "reset")
+      2-1. Drop NaN Value: Preprocess - drop
+      2-2. Reset index value: Preprocess - reset
       
-    (Check Dataset using "printStatistic")
+    (Check Dataset: printStatistic)
     
-    3. Double For Loop for test below using scaled data and unscaled data ("Model" - "scaling")
+    3. Double For Loop for test below using scaled data and unscaled data: Model - scaling
       3-1. Inner For Loop: Compare result with various test_ratio (0.1, 0.2, 0.3)
-      3-2. Outer For Loop: Compare result with 4 classification models ("Model" - "DecisionTreeEntropy", "DecisionTreeGini", "LogisticRegression", "SVM")
-        -> Use various of the model parameters and hyperparameters for each model
-        -> Use various numbers k for k-fold cross validation for set best hyperparameters ("Model" - "gridSearch")
-      3-3. Print accuracy and best hyperparameter of each case to compare ("Model" - "printAcc")
-       -> Use various numbers k for k-fold cross validation for set best hyperparameters ("Model" - "test")
-      So, 3 loop (test_ratio) x 4 loop (classification model) = 12 loop for scaled, unscaled data each
+      3-2. Outer For Loop: Compare result with 4 classification models: Model - DecisionTreeEntropy, DecisionTreeGini, LogisticRegression, SVM
+          ∙ Use various of the model parameters and hyperparameters for each model: Model - gridSearch
+      3-3. Print accuracy and best hyperparameter of each case to compare: Model - printAcc
+          ∙ Use various numbers k for k-fold cross validation for set best hyperparameters: Model - test
+      So, "3 loop (test_ratio) x 4 loop (classification model) = 12 loop" for scaled/unscaled data each
 
 </details>
 
@@ -43,6 +42,28 @@
  <details>
     <summary>Detail</summary>
     
-    ㅇㅇㅇㅇㅇㅇㅏ아아아아ㅏㅏ
+    AUTOML:
+      1. Read Data
+      
+      (Check Dataset: printStatistic)
+      
+      2. Do Preprocessing
+        2-1. Fill NaN with mean value: Preprocess - fill
+        2-2. Sampling data: Preprocess - sampling
+        2-3. Encoding using various methods (Label, Ordinal): Preprocess - doEncoding
+        2-4. Scaling using various methods (Standard, MinMax, Robust): Preprocess - doScaling
+      
+      3. Clustering for each algorithm (K-means, EM, CLARANS, DBSCAN): Model - KMeans, EM, CLARANS, DBSCAN
+        ∙ Use for-loop for each model to experiment algorithm with k value (2, 4, 6, 8, 10, 12)
+      
+      4. Print Plot and Score, Compare Result
+         ∙ Plot the results of clustering to “eyeball” the results: Model - printPlot
+         ∙ Use a quality measure tool, such as the Silhouette score, knee method, and purity: Model - printScore, elbow, purity_score
+         ∙ Compare the clustering results with N quantiles of the medianHouseValue feature values in the original dataset: model - compare
+      
+      Repeat above process with 3 cases (Random combination of features)
+      So, "3 loop (random combination of features) x 2 loop (encoder) x 3 loop (scaler) x 4 loop (cluster) = 72 loop + a (k value loop for each cluster model)"
+        
+      
 
 </details>
