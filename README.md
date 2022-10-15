@@ -28,6 +28,7 @@
           ∙ Use various of the model parameters and hyperparameters for each model: Model - gridSearch
       3-3. Print accuracy and best hyperparameter of each case to compare: Model - printAcc
           ∙ Use various numbers k for k-fold cross validation for set best hyperparameters: Model - test
+          
       So, "3 loop (test_ratio) x 4 loop (classification model) = 12 loop" for scaled/unscaled data each
 
 </details>
@@ -64,6 +65,7 @@
          ∙ Compare the clustering results with N quantiles of the medianHouseValue feature values in the original dataset: model - compare
       
       Repeat above process with 3 cases (Random combination of features)
+      
       So, "3 loop (random combination of features) x 2 loop (encoder) x 3 loop (scaler) x 4 loop (cluster) = 72 loop + a (k value loop for each cluster model)"
         
       
