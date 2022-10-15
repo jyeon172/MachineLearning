@@ -22,13 +22,15 @@
       
     (Check Dataset: printStatistic)
     
-    3. Double For Loop for test below using scaled data and unscaled data: Model - scaling
+    3. Compare the performance for each classificatoin model
       3-1. Inner For Loop: Compare result with various test_ratio (0.1, 0.2, 0.3)
       3-2. Outer For Loop: Compare result with 4 classification models: Model - DecisionTreeEntropy, DecisionTreeGini, LogisticRegression, SVM
           ∙ Use various of the model parameters and hyperparameters for each model: Model - gridSearch
       3-3. Print accuracy and best hyperparameter of each case to compare: Model - printAcc
           ∙ Use various numbers k for k-fold cross validation for set best hyperparameters: Model - test
-          
+      
+      Repeat above process with 2 cases (scaled/unscaled data): Model - scaling
+      
       So, "3 loop (test_ratio) x 4 loop (classification model) = 12 loop" for scaled/unscaled data each
 
 </details>
@@ -59,7 +61,7 @@
       3. Clustering for each algorithm (K-means, EM, CLARANS, DBSCAN): Model - KMeans, EM, CLARANS, DBSCAN
         ∙ Use for-loop for each model to experiment algorithm with k value (2, 4, 6, 8, 10, 12)
       
-      4. Print Plot and Score, Compare Result
+      4. Print plot and score, Compare result
          ∙ Plot the results of clustering to “eyeball” the results: Model - printPlot
          ∙ Use a quality measure tool, such as the Silhouette score, knee method, and purity: Model - printScore, elbow, purity_score
          ∙ Compare the clustering results with N quantiles of the medianHouseValue feature values in the original dataset: model - compare
